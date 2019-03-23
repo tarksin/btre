@@ -25,13 +25,15 @@ SECRET_KEY = 'v_%0kvkhpaj-o8rtt7zta_)!lhfa8%)g*2qcieuqvfa-z24o#p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.117', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.1.117', '127.0.0.1', '127.0.0.120']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'listings.apps.ListingsConfig',
+    'realtors.apps.RealtorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,6 +123,6 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIR = [
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'btre/static')
 ]
